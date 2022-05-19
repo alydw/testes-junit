@@ -20,4 +20,12 @@ public class DevolucaoTest {
         devolucao.diasEntregues(22);
         Assert.assertFalse(devolucao.getDataEfetuada());
     }
+
+    @Test
+    public void dataDevolucaoRenovada(){
+        Devolucao devolucao = new Devolucao();
+        devolucao.diasParaDevolucao(3);
+        devolucao.diasAdicionados(10);
+        Assert.assertEquals(13,devolucao.getDevolucaoRenovada(), 0.0);
+    }
 }

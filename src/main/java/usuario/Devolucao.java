@@ -33,4 +33,14 @@ public class Devolucao {
         return false;
     }
 
+    public void diasAdicionados(int dias_adicionados) {
+        this.dia_devolucao += dias_adicionados;
+    }
+    public double getDiasAdicionados(){
+        return this.dia_devolucao;
+    }
+
+    public double getDevolucaoRenovada() {
+        return this.getDiasAdicionados();
+    }
 }
