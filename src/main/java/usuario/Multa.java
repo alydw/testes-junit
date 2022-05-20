@@ -42,4 +42,12 @@ public class Multa {
     public double getValorVariosLivros() {
         return this.getValorMultaPorDia() * this.getLivros_em_atraso() * this.getDias_de_atraso();
     }
+
+    public double valorFinalMulta(){
+        if (this.livros_em_atraso > 1){
+            return this.getValorMultaPorDia() * this.getLivros_em_atraso() * this.getDias_de_atraso();
+        }else{
+            return this.getValorMultaPorDia() * this.getDias_de_atraso();
+        }
+    }
 }
