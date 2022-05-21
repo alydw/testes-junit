@@ -1,5 +1,6 @@
 package usuario;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +11,11 @@ public class DevolucaoTest {
     @Before
     public void setConfig(){
         this.devolucao = new Devolucao();
+    }
+
+    @After
+    public void setFinal(){
+        System.out.println("Teste finalizado");
     }
 
     @Test

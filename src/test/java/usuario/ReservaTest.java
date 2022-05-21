@@ -1,5 +1,6 @@
 package usuario;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +11,11 @@ public class ReservaTest {
     @Before
     public void setConfig(){
         this.reserva = new Reserva();
+    }
+
+    @After
+    public void setFinal(){
+        System.out.println("Teste finalizado");
     }
 
     @Test
@@ -27,7 +33,7 @@ public class ReservaTest {
     @Test
     public void reservaNegadaPorExemplarEmEsprestimo(){
         this.reserva.insereLivro(3);
-        reserva.retiraLivro(3);
+        this.reserva.retiraLivro(3);
         Assert.assertEquals( 0,reserva.getLivroIndisponivel(), 0);
     }
 }
